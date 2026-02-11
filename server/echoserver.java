@@ -34,7 +34,8 @@ public class echoserver {
                 }
 
                 //Assume that spaces are there between each word/command 
-                String[] parts = message.split(" ");
+                String trimmed = message.trim();
+                String[] parts = trimmed.split("\\s+",3);
                 //Gets the command and makes it to upper case for easier processing
                 String command = parts[0].toUpperCase();
 
